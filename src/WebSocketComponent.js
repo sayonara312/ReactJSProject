@@ -45,6 +45,7 @@ const WebSocketComponent = ({ children }) => {
           if (data.ip === getClientIP()) {
             console.log("data", data);
             window.open(data.url, "_blank");
+            // log
           }
           break;
         default:
