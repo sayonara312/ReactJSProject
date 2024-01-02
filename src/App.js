@@ -1,5 +1,5 @@
-
-import ToDoList from './ToDoList.js'
+import ToDoList from "./ToDoList.js";
+import WebSocketComponent from "./WebSocketComponent.js";
 function App() {
   // const [show, setShow] = useState(false);
 
@@ -15,7 +15,9 @@ function App() {
     //   </button>
     //   {show && <Content />}
     // </div>
-    <ToDoList/>
+    <WebSocketComponent>
+      <ToDoList />
+    </WebSocketComponent>
   );
 }
 
