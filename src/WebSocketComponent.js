@@ -7,7 +7,11 @@ const WebSocketComponent = ({ children }) => {
   const [message, setMessage] = useState("");
   const [receivedMessage, setReceivedMessage] = useState("");
   const WS_URL = "ws://localhost:3001";
-  const { sendJsonMessage, lastMessage, readyState } = useWebSocket(WS_URL);
+  const { sendJsonMessage, lastMessage, readyState } = useWebSocket(WS_URL, {
+    shouldReconnect: () => {},
+    reconnectAttempts: 5,
+    reconnectInterval: 3000,
+  });
 
   useWebSocket(WS_URL, {
     onOpen: () => {

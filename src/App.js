@@ -1,4 +1,5 @@
-import ToDoList from "./ToDoList.js";
+import Panzoom from "./Panzoom.jsx";
+
 import WebSocketComponent from "./WebSocketComponent.js";
 function App() {
   // const [show, setShow] = useState(false);
@@ -15,9 +16,9 @@ function App() {
     //   </button>
     //   {show && <Content />}
     // </div>
-    <WebSocketComponent>
-      <ToDoList />
-    </WebSocketComponent>
+    // <WebSocketComponent>
+    <Panzoom />
+    // </WebSocketComponent>
   );
 }
 
